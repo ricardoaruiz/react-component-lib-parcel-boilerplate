@@ -12,7 +12,7 @@
     "build": "parcel build src/index.ts --no-source-maps",
     "clean": "rimraf ./dist",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o ./docs"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
