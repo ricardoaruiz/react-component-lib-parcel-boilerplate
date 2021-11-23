@@ -1,0 +1,4 @@
+.parcel-cache
+.storybook
+node_modules
+dist
