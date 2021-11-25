@@ -7,5 +7,17 @@ module.exports = {
     "@storybook/preset-scss",
     "@storybook/addon-links",
     "@storybook/addon-essentials"
-  ]
+  ],
+  webpackFinal: config => {
+    // Default rule for images /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/
+    const fileLoaderRule = config.module.rules.find(rule => rule.test && rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack', 'url-loader']
+    });
+
+    return config;
+  }
 }

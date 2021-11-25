@@ -8,5 +8,11 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   moduleNameMapper: {
     '\\.(scss|sass)$': 'identity-obj-proxy',
+    '^.+\\.svg$': 'jest-svg-transformer',
+  },
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2|svg)$':
+      'jest-transform-stub',
   },
 }
