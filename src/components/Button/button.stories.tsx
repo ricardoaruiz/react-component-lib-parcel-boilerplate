@@ -3,6 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { Button } from './'
 import { ButtonProps } from './types'
+import { Check } from '../Icon'
 
 export default {
   title: 'RAR Components/Button',
@@ -10,7 +11,10 @@ export default {
 } as Meta
 
 export const Primary: Story<ButtonProps> = (args) => (
-  <Button {...args}>Click me!</Button>
+  <Button {...args}>
+    <Check />
+    Click me!
+  </Button>
 )
 Primary.args = {
   variant: 'primary',

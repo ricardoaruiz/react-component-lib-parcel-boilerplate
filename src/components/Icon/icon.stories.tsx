@@ -10,7 +10,15 @@ export default {
 export const Icons: Story = () => (
   <div>
     <Check />
+    <Check width="32px" />
+    <Check width="48px" />
+
     <Bookmark />
+    <Bookmark width="32px" />
+    <Bookmark width="48px" />
+
     <Menu />
+    <Menu width="32px" />
+    <Menu width="48px" />
   </div>
 )
