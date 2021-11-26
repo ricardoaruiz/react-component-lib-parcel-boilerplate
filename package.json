@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "run-s clean",
-    "build": "parcel build src/index.ts --no-source-maps",
+    "build": "parcel build src/index.ts --no-source-maps --no-cache",
     "clean": "rimraf ./dist",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o ./docs",

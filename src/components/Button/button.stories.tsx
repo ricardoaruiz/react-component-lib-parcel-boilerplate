@@ -1,26 +1,24 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { Button } from './'
+import { ButtonProps } from './types'
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'RAR Components/Button',
   component: Button,
-} as ComponentMeta<typeof Button>
+} as Meta
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => (
+export const Primary: Story<ButtonProps> = (args) => (
   <Button {...args}>Click me!</Button>
 )
-
-export const Primary = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   variant: 'primary',
 }
 
-export const Secondary = Template.bind({})
+export const Secondary: Story<ButtonProps> = (args) => (
+  <Button {...args}>Click me!</Button>
+)
 Secondary.args = {
   variant: 'secondary',
 }

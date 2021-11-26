@@ -1,1 +1,2 @@
-export { Button } from './components'
+export { Button } from './components/Button'
+export { Check, Bookmark, Menu } from './components/Icon'
