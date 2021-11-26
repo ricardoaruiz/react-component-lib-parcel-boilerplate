@@ -2,18 +2,18 @@ import React from 'react'
 
 import { IconType, ImageDictionaryType } from './types'
 
-import check from '../../assets/icons/check.svg'
-import bookmark from '../../assets/icons/bookmark.svg'
-import menu from '../../assets/icons/menu.svg'
+import { ReactComponent as CheckIcon } from '../../assets/icons/check.svg'
+import { ReactComponent as BookmarkIcon } from '../../assets/icons/bookmark.svg'
+import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg'
 
-const images: ImageDictionaryType = {
-  check: { url: check, alt: 'Check' },
-  bookmark: { url: bookmark, alt: 'Bookmark' },
-  menu: { url: menu, alt: 'Menu' },
+const images1: ImageDictionaryType = {
+  check: CheckIcon,
+  bookmark: BookmarkIcon,
+  menu: MenuIcon,
 }
 
 const Icon: React.FC<IconType> = ({ name }) => {
-  return <img src={images[name].url} alt={images[name].alt} />
+  return React.createElement(images1[name])
 }
 
 export const Check: React.VFC = () => <Icon name="check" />

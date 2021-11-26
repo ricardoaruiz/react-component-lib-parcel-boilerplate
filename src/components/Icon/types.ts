@@ -5,8 +5,5 @@ export type IconType = {
 }
 
 export type ImageDictionaryType = {
-  [key: string]: {
-    url: string
-    alt: string
-  }
+  [key: string]: React.FC<React.SVGProps<SVGSVGElement>>
 }
